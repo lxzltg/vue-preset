@@ -1,0 +1,19 @@
+{
+  "useConfigFiles": true,
+  "plugins": {
+    "@vue/cli-plugin-babel": {
+      "version": "^3.5.0"
+    },
+    "@vue/cli-service": {
+      "version": "^3.5.0"
+    },
+    "@vue/cli-plugin-eslint": {
+      "version": "^3.5.0",
+      "config": "standard",
+      "lintOn": [
+        "save" ,
+        "commit"
+      ]
+    }
+  }
+}
