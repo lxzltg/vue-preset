@@ -1,5 +1,3 @@
-const fs = require('fs')
-
 module.exports = (api, options, rootOptions) => {
   api.extendPackage((pkg) => {
     pkg.dependencies = {}
@@ -20,7 +18,6 @@ module.exports = (api, options, rootOptions) => {
       "@vue/eslint-config-standard": "^4.0.0",
       "babel-eslint": "^10.0.1",
       "babel-plugin-component": "^1.1.1",
-      "babel-plugin-import": "^1.11.0",
       "eslint": "^5.8.0",
       "eslint-plugin-vue": "^5.0.0",
       "postcss-advanced-variables": "^3.0.0",
