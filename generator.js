@@ -1,12 +1,16 @@
+const fs = require('fs')
+
 module.exports = (api, options, rootOptions) => {
+  api.extendPackage((pkg) => {
+    pkg.dependencies = {}
+    return pkg 
+  })
   api.extendPackage({
     dependencies: {
-      // "axios": "^0.18.0",
-      // "vue": "^2.6.6",
-      // "vue-router": "^3.0.1",
-      // "vuex": "^3.0.1",
+      'wec-frame': 'http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git',
     },
     devDependencies: {
+      "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
       "@babel/plugin-proposal-export-default-from": "^7.2.0",
       "@babel/plugin-proposal-function-bind": "^7.2.0",
       "@babel/plugin-proposal-optional-chaining": "^7.2.0",
@@ -52,6 +56,10 @@ module.exports = (api, options, rootOptions) => {
   //   './src/.gitignore': './templates/wisedu/.gitignore',
   // })
   api.onCreateComplete(() => {
+    // let pkg = fs.readFileSync(options.projectName + '/package.json', { encoding: 'utf-8' })
+    // pkg = pkg.replace(/"core.js":\s"\^\d{1,2}.\d{1,2}.\d{1,2}",?\n?/, '')
+    // pkg = pkg.replace(/"vue":\s"\^\d{1,2}.\d{1,2}.\d{1,2}",?\n?/, '')
+    // fs.writeFileSync(options.projectName + '/package.json', pkg)
   })
   api.postProcessFiles((files) => {
     delete files['src/components/HelloWorld.vue']
