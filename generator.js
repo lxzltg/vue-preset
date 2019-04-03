@@ -30,17 +30,17 @@ module.exports = (api, options, rootOptions) => {
     }
   });
 
-  options.pug = true
-  if (options.pug) {
-    api.extendPackage({
-      devDependencies: {
-        "pug": "^2.0.3",
-        "pug-filters": "^3.1.0",
-        "pug-loader": "^2.4.0",
-        "pug-plain-loader": "^1.0.0",
-      }
-    })
-  }
+  // options.pug = true
+  // if (options.pug) {
+  //   api.extendPackage({
+  //     devDependencies: {
+  //       "pug": "^2.0.3",
+  //       "pug-filters": "^3.1.0",
+  //       "pug-loader": "^2.4.0",
+  //       "pug-plain-loader": "^1.0.0",
+  //     }
+  //   })
+  // }
 
   api.render('./templates/wisedu')
   // api.render({
