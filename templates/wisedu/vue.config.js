@@ -3,7 +3,7 @@
 
 module.exports = {
   lintOnSave: true,
-  chainWebapck(config) {
+  chainWebpack(config) {
     config.module
       .rule('wec-frame')
       .test(/\.js$/)
