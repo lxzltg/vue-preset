@@ -49,15 +49,13 @@ module.exports = (api, options, rootOptions) => {
   // }
 
   api.render('./templates/wisedu')
-  // api.render({
-  //   './src/babel.config.js': './templates/wisedu/babel.config.js',
-  //   './src/postcss.config.js': './templates/wisedu/postcss.config.js',
-  //   './src/vue.config.js': './templates/wisedu/vue.config.js',
-  //   './src/.browserslistrc': './templates/wisedu/.browserslistrc',
-  //   './src/.editorconfig': './templates/wisedu/.editorconfig',
-  //   './src/.eslintrc.js': './templates/wisedu/.eslintrc.js',
-  //   './src/.gitignore': './templates/wisedu/.gitignore',
-  // })
+  // 上面的方式不能拷贝隐藏文件
+  api.render({
+    '.browserslistrc': './templates/wisedu/.browserslistrc',
+    '.editorconfig': './templates/wisedu/.editorconfig',
+    '.eslintrc.js': './templates/wisedu/.eslintrc.js',
+    '.gitignore': './templates/wisedu/.gitignore',
+  })
   api.onCreateComplete(() => {
     // let pkg = fs.readFileSync(options.projectName + '/package.json', { encoding: 'utf-8' })
     // pkg = pkg.replace(/"core.js":\s"\^\d{1,2}.\d{1,2}.\d{1,2}",?\n?/, '')
@@ -65,6 +63,7 @@ module.exports = (api, options, rootOptions) => {
     // fs.writeFileSync(options.projectName + '/package.json', pkg)
   })
   api.postProcessFiles((files) => {
+    // console.log(Object.keys(files))
     delete files['src/components/HelloWorld.vue']
     delete files['src/assets/logo.png']
     delete files['public/favicon.ico']
