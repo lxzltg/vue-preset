@@ -31,6 +31,7 @@ module.exports = (api, options, rootOptions) => {
       "pug-filters": "^3.1.0",
       "pug-loader": "^2.4.0",
       "pug-plain-loader": "^1.0.0",
+      "babel-plugin-import": "^1.11.0",
       "babel-plugin-component": "^1.1.1",
       "svg-to-vue-component": "^0.3.7",
       "webpack-bundle-analyzer": "^3.3.2"
