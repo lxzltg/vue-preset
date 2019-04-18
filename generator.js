@@ -67,6 +67,7 @@ module.exports = (api, options, rootOptions) => {
     // console.log(Object.keys(files))
     delete files['src/components/HelloWorld.vue']
     delete files['src/assets/logo.png']
+    delete files['src/App.vue']
     delete files['public/favicon.ico']
   })
 }
