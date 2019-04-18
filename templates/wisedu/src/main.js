@@ -1,2 +1,7 @@
-// import router from './router'
-// import store from './store'
+import WecFrame from 'wec-frame'
+import store from './store'
+
+new WecFrame({
+  store
+})
+
