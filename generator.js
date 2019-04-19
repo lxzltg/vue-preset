@@ -1,6 +1,8 @@
 module.exports = (api, options, rootOptions) => {
   api.extendPackage((pkg) => {
-    pkg.dependencies = {}
+    pkg.scripts = {
+      readd: "yarn add http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git"
+    }
     return pkg 
   })
   api.extendPackage({
