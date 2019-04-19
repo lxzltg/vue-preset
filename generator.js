@@ -1,13 +1,16 @@
 module.exports = (api, options, rootOptions) => {
   api.extendPackage((pkg) => {
     pkg.scripts = {
-      readd: "yarn add http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git"
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint",
+      "readd": "yarn add http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git"
     }
     return pkg 
   })
   api.extendPackage({
     dependencies: {
-      'wec-frame': 'http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git',
+      "wec-frame": "http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git",
     },
     devDependencies: {
       "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
