@@ -2,7 +2,7 @@ module.exports = (api, options, rootOptions) => {
   api.extendPackage((pkg) => {
     pkg.scripts = {
       "serve": "vue-cli-service serve",
-      "build": "vue-cli-service build",
+      "build": "yarn readd && vue-cli-service build",
       "lint": "vue-cli-service lint",
       "readd": "yarn add http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git"
     }
@@ -13,6 +13,8 @@ module.exports = (api, options, rootOptions) => {
       "wec-frame": "http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git",
     },
     devDependencies: {
+      "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0-beta.3",
+      "@vue/babel-preset-jsx": "^1.0.0-beta.3",
       "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
       "@babel/plugin-proposal-export-default-from": "^7.2.0",
       "@babel/plugin-proposal-function-bind": "^7.2.0",

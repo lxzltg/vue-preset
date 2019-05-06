@@ -1,8 +1,7 @@
-// const publicPath = '/'
-// const api = `${publicPath}api`
-
+const context = ''
 module.exports = {
   lintOnSave: true,
+  publicPath: process.env.NODE_ENV === 'production' ? `${context}/static` : '/',
   chainWebpack(config) {
     const FILE_RE = /\.(vue|js|ts|svg)$/
     config.module.rule('svg').issuer(file => !FILE_RE.test(file))
@@ -32,14 +31,10 @@ module.exports = {
   devServer: {
     port: 8080,
     disableHostCheck: true,
-    // proxy: {
-    //   [api]: {
-    //     target: '',
-    //     changeOrigin: true,
-    //     pathRewrite: {
-    //       [`^${api}`]: ''
-    //     }
-    //   }
-    // }
+    proxy: {
+      [context]: {
+        target: process.env.VUE_APP_XXX
+      }
+    }
   }
 }

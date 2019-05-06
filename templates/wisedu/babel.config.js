@@ -1,8 +1,10 @@
 module.exports = {
   presets: [
-    '@vue/app'
+    '@vue/app',
+    '@vue/babel-preset-jsx'
   ],
   plugins: [
+
     '@babel/plugin-proposal-function-bind',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-export-namespace-from',
