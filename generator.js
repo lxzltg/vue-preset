@@ -6,6 +6,8 @@ module.exports = (api, options, rootOptions) => {
       "lint": "vue-cli-service lint",
       "readd": "yarn add http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git"
     }
+    delete pkg.dependencies.vue
+    delete pkg.dependencies['core-js']
     return pkg 
   })
   api.extendPackage({
