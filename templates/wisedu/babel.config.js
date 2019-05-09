@@ -3,7 +3,11 @@ module.exports = {
     '@vue/app',
   ],
   plugins: [
-
+    '@babel/plugin-proposal-throw-expressions',
+    '@babel/plugin-proposal-pipeline-operator',
+    '@babel/plugin-proposal-nullish-coalescing-operator',
+    '@babel/plugin-proposal-do-expressions',
+    '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-function-bind',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-export-namespace-from',

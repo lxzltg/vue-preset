@@ -15,6 +15,11 @@ module.exports = (api, options, rootOptions) => {
       "wec-frame": "http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git",
     },
     devDependencies: {
+      "@babel/plugin-proposal-do-expressions": "^7.2.0",
+      "@babel/plugin-proposal-pipeline-operator": "^7.3.2",
+      "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+      "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+      "@babel/plugin-proposal-class-properties": "^7.4.4",
       "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
       "@babel/plugin-proposal-export-default-from": "^7.2.0",
       "@babel/plugin-proposal-function-bind": "^7.2.0",
