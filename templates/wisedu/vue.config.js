@@ -6,14 +6,10 @@ module.exports = {
     const FILE_RE = /\.(vue|js|ts|svg)$/
     config.module.rule('svg').issuer(file => !FILE_RE.test(file))
     config.module
-      .rule('svg-component')
+      .rule('svg-sprite')
       .test(/\.svg$/)
-      .issuer(file => FILE_RE.test(file))
-      .use('vue')
-      .loader('vue-loader')
-      .end()
-      .use('svg-to-vue-component')
-      .loader('svg-to-vue-component/loader')
+      .use('svg-sprite')
+      .loader('svg-sprite-loader')
     config.module
       .rule('wec-frame')
       .test(/\.js$/)
