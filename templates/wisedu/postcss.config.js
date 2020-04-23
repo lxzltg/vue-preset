@@ -6,8 +6,6 @@ module.exports = {
     'postcss-inherit': {},
     'postcss-nested': {},
     'postcss-advanced-variables': {},
-    'postcss-preset-env': {
-      stage: 0
-    }
-  }
+    'postcss-preset-env': { stage: 0 },
+  },
 }

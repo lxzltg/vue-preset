@@ -1,10 +1,11 @@
 module.exports = {
-  presets: [
-    '@vue/app',
-  ],
+  presets: ['@vue/app'],
   plugins: [
     '@babel/plugin-proposal-throw-expressions',
-    ['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }],
+    [
+      '@babel/plugin-proposal-pipeline-operator',
+      { 'proposal': 'minimal' },
+    ],
     '@babel/plugin-proposal-nullish-coalescing-operator',
     '@babel/plugin-proposal-do-expressions',
     '@babel/plugin-proposal-class-properties',
@@ -16,15 +17,15 @@ module.exports = {
       'import',
       {
         libraryName: 'iview',
-        libraryDirectory: 'src/components'
-      }
+        libraryDirectory: 'src/components',
+      },
     ],
     [
       'component',
       {
         libraryName: 'element-ui',
-        styleLibraryName: 'theme-chalk'
-      }
-    ]
-  ]
+        styleLibraryName: 'theme-chalk',
+      },
+    ],
+  ],
 }
