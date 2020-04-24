@@ -20,6 +20,7 @@ module.exports = {
     const FILE_RE = /\.(vue|js|ts|svg)$/
 
     config.module.rule('svg').issuer((file) => !FILE_RE.test(file))
+    config.module.rules.store.get('js').exclude.store.add(/axios/)
     config.module
       .rule('svg-sprite')
       .test(/\.svg$/)
