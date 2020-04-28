@@ -98,7 +98,6 @@ module.exports = (api, options, rootOptions) => {
   api.render({
     '.browserslistrc': './templates/wisedu/.browserslistrc',
     '.env': './templates/wisedu/.env',
-    '.env.development.local': './templates/wisedu/.env.development.local',
     '.editorconfig': './templates/wisedu/.editorconfig',
     '.eslintrc.js': './templates/wisedu/.eslintrc.js',
     '.gitignore': './templates/wisedu/.gitignore',
