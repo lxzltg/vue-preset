@@ -29,13 +29,10 @@ module.exports = {
       .loader('svg-sprite-loader')
 
     config.module
-      .rule('wec-frame')
+      .rule('wec-mobile-frame-js')
       .test(/\.js$/)
       .include
-      .add(/wec-frame(\\|\/)src/)
-      .end()
-      .exclude
-      .add(/wec-frame(\\|\/)src(\\|\/)utils(\\|\/)axios/)
+      .add(/wec-mobile-frame(\\|\/)src/)
       .end()
       .use('babel')
       .loader('babel-loader')
@@ -55,25 +52,11 @@ module.exports = {
       .loader(path.resolve('node_modules/wec-frame/loader/css/cssVar.js'))
       .options({ cssVar: getCssVar() })
 
-    config.module
-      .rule('iview')
-      .test(/\.js$/)
-      .include
-      .add(/iview(\\|\/)src/)
-      .end()
-      .exclude
-      .add(/iview(\\|\/)src(\\|\/)utils(\\|\/)date/)
-      .end()
-      .use('babel')
-      .loader('babel-loader')
-      .options({
-        presets: [
-          [
-            '@babel/preset-env',
-            { modules: false },
-          ],
-        ],
-      })
+      config.module
+      .rule('px2vw-vue')
+      .test(/\.(js|css|vue)$/)
+      .use('px2vw')
+      .loader(path.resolve('loader/px2vw.js'))
 
     // config.plugin('vue-vendor')
     //   .use(webpack.DllReferencePlugin, [{ manifest: require(path.resolve('manifest/vue.json')) }])

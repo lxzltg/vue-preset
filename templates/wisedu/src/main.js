@@ -1,7 +1,7 @@
-import WecFrame from 'wec-frame'
+import WecMobileFrame from 'wec-frame'
 import store from './store'
 
-new WecFrame({
+new WecMobileFrame({
   store
 })
 

@@ -7,7 +7,7 @@ module.exports = (api, options, rootOptions) => {
       "lintcss": "stylelint src/**/*.{vue,css} --fix",
       "lintAll": "vue-cli-service lint && yarn lintcss",
       "autoBuild": "bash ./node_modules/wec-frame/script/build.sh",
-      "readd": "yarn add http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git",
+      "readd": "yarn add http://172.16.7.53:9090/wecloud-svs-apps/WecMobileFrame.git",
       "installRule": "yarn add http://172.16.7.53:9090/zhouxiang/eslint-plugin-vue-zx.git -D",
       "installStyleRule": "yarn add http://172.16.7.53:9090/zhouxiang/stylelint-config-vue.git -D",
       "installCommitlint": "yarn add http://172.16.7.53:9090/zhouxiang/commitlint-config-zx.git -D"
@@ -20,7 +20,7 @@ module.exports = (api, options, rootOptions) => {
   })
   api.extendPackage({
     dependencies: {
-      "wec-frame": "http://172.16.7.53:9090/wecloud-svs-apps/WecFrame.git",
+      "wec-mobile-frame": "http://172.16.7.53:9090/wecloud-svs-apps/WecMobileFrame.git",
     },
     devDependencies: {
       "@babel/plugin-proposal-class-properties": "^7.4.4",
