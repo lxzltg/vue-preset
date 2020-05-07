@@ -1,1 +1,2 @@
-// index.js
+// constant
+export * as componentConfig from './componentConfig'

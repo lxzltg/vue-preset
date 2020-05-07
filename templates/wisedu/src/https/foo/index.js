@@ -1,10 +1,10 @@
 import { post } from 'wec-frame/src/utils/http'
-import { CURRENT_FULL_PREFIX } from 'wec-frame/src/https'
+const { VUE_APP_CONTEXT } = process.env
 
 export * from '@/https/common'
 
 // 注释
-export const doSomethingUrl = `${CURRENT_FULL_PREFIX}/xx/xx/xx/doSomething`
+export const doSomethingUrl = `${VUE_APP_CONTEXT}/xx/xx/xx/doSomething`
 export function doSomething (params) {
   return post(doSomethingUrl, { ...params })
 }
