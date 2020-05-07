@@ -1,4 +1,4 @@
-import { post } from 'wec-frame/src/utils/http'
+import { post } from '@/utils/http'
 const { VUE_APP_CONTEXT } = process.env
 
 export * from '@/https/common'
