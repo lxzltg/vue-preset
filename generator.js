@@ -96,6 +96,7 @@ module.exports = (api, options, rootOptions) => {
   api.render({
     '.browserslistrc': './templates/wisedu/.browserslistrc',
     '.env': './templates/wisedu/.env',
+    '.env.development.local': './templates/wisedu/.env.development',
     '.editorconfig': './templates/wisedu/.editorconfig',
     '.eslintrc.js': './templates/wisedu/.eslintrc.js',
     '.gitignore': './templates/wisedu/.gitignore',
@@ -111,7 +112,7 @@ module.exports = (api, options, rootOptions) => {
     // console.log(Object.keys(files))
     delete files['src/components/HelloWorld.vue']
     delete files['src/assets/logo.png']
-    delete files['src/App.vue']
+    // delete files['src/App.vue']
     delete files['public/favicon.ico']
   })
 }
