@@ -29,6 +29,26 @@ module.exports = {
       .loader('svg-sprite-loader')
 
     config.module
+      .rule('wec-frame-js')
+      .test(/\.js$/)
+      .include
+      .add(/wec-frame(\\|\/)src/)
+      .end()
+      .exclude
+      .add(/wec-frame(\\|\/)src(\\|\/)utils(\\|\/)axios/)
+      .end()
+      .use('babel')
+      .loader('babel-loader')
+      .options({
+        presets: [
+          [
+            '@babel/preset-env',
+            { modules: false },
+          ],
+        ],
+      })
+
+    config.module
       .rule('wec-mobile-frame-js')
       .test(/\.js$/)
       .include
