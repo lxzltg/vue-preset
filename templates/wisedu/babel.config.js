@@ -16,15 +16,9 @@ module.exports = {
     [
       'import',
       {
-        libraryName: 'iview',
-        libraryDirectory: 'src/components',
-      },
-    ],
-    [
-      'component',
-      {
-        libraryName: 'element-ui',
-        styleLibraryName: 'theme-chalk',
+        libraryName: 'vant',
+        libraryDirectory: 'es',
+        style: true,
       },
     ],
   ],
