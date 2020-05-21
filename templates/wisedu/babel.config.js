@@ -20,6 +20,30 @@ module.exports = {
         libraryDirectory: 'es',
         style: true,
       },
+      'vant',
+    ],
+    [
+      'import',
+      {
+        'libraryName': 'iview',
+        'libraryDirectory': 'src/components',
+      },
+      'iview',
+    ],
+    [
+      'import',
+      {
+        'libraryName': 'echarts',
+        'libraryDirectory': 'src/components',
+      },
+      'echarts',
+    ],
+    [
+      'component',
+      {
+        libraryName: 'element-ui',
+        styleLibraryName: 'theme-chalk',
+      },
     ],
   ],
 }

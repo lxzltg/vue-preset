@@ -1,7 +1,10 @@
 const path = require('path')
 
 const { getCssVar } = require('wec-frame/script/cssVarHelper')
-
+// gzip压缩
+// const CompressionPlugin = require('compression-webpack-plugin')
+// report代码统计
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { VUE_APP_CONTEXT, VUE_APP_DEV_SERVER, NODE_ENV } = process.env
 
 if (!VUE_APP_CONTEXT) {
@@ -15,8 +18,27 @@ if (NODE_ENV === 'development' && !VUE_APP_DEV_SERVER) {
 }
 
 module.exports = {
+  // css: {
+  //   // 是否使用css分离插件 ExtractTextPlugin
+  //   extract: false,
+
+  //   // 开启 CSS source maps?
+  //   sourceMap: false,
+
+  //   // css预设器配置项
+  //   loaderOptions: {},
+
+  //   // 启用 CSS modules for all css / pre-processor files.
+  //   modules: false,
+  // },
+
+  // productionSourceMap: false, // 是否在构建生产包时生成 sourceMap 文件，false将提高构建速度
+  // outputDir: 'dist', // 构建输出目录
+  // assetsDir: 'assets', // 静态资源目录(js,css,img,fonts)
   publicPath: NODE_ENV === 'production' ? `${VUE_APP_CONTEXT}/static` : '/',
   chainWebpack (config) {
+    // report代码统计
+    // config.plugin('analyzer').use(BundleAnalyzerPlugin).end()
     const FILE_RE = /\.(vue|js|ts|svg)$/
 
     config.module.rule('svg').issuer((file) => !FILE_RE.test(file))
